@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %} Formulario {% endblock %}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+  <div class="row justify-content-center mx-3 bg-figures">
+    <div class="col-lg-8 col-md-10 col-sm-12 shadow rounded my-3 p-0">
+
+      <!--Titulo-->
+      <h2 class="text-white bg-primary text-center rounded-top p-3">Editar mis datos</h2>
+
+      <!--Alerta-->
+      <div class="alert alert-dismissible alert-warning mx-3">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <h4 class="alert-heading">Recuerda que...!</h4>
+        <p class="mb-0">Recuerda que si no quieres que se muestre un dato solamente deja el espacio en blanco.
+      </div>
+
+      <!--Formulario-->
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group mx-3">
+          {{form|crispy}}
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary my-3">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+{% endblock %}

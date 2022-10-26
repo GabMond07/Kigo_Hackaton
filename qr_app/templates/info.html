@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Informacion {% endblock %}
+{% block contenido %}
+
+<div class="container-fluid p-0">
+
+    <!--Portada-->
+    <div class="p-5 mb-4 portada">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-sm-12 col-md-8 p-3">
+                <h1 class="fw-bold text-uppercase text-white">¿Cómo funciona?</h1>
+                <p class="col-md-8 fs-4 text-white">¡Ésta es una guía rápida de como usar QR Salud!</p>
+            </div>
+            <div class="col-sm-8 col-md-4 text-center">
+                <img src="{% static 'images/info-01.png' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--Cards de pasos-->
+    <div class="row justify-content-center mx-5 my-4">
+        <h3 class="text-center">Sigue los siguientes pasos...</h3>
+
+        <!--Card paso 1-->
+        <div class="col-sm-12 col-md-6 col-lg-3 m-3 rounded-4 shadow">
+            <div class="row bg-danger rounded-top text-center">
+                <h3 class="text-white my-3">Paso 1</h3>
+            </div>
+            <div class="row m-2">
+                <img src="{% static 'images/qr.png' %}" class="img-fluid text-center p-3" alt="">
+                <p>
+                    Al momento de adquirir tu pulsera de QR Salud te llegará dentro de la caja una tarjeta con tu nombre
+                    de usuario y tu contraseña. Ingresa a www.qrsalud.com y accede a tu cuenta para comenzar.
+                </p>
+            </div>
+        </div>
+
+        <!--Card paso 2-->
+        <div class="col-sm-12 col-md-6 col-lg-3 m-3 rounded-4 shadow">
+            <div class="row bg-warning rounded-top text-center">
+                <h3 class="text-white my-3">Paso 2</h3>
+            </div>
+            <div class="row m-2">
+                <img src="{% static 'images/form.png' %}" class="img-fluid text-center p-3" alt="">
+                <p>
+                    Una vez dentro de la plataforma podrás ver un formulario, llénalo los datos que prefieras,
+                    recuerda que los datos que ingreses podrán ser vistos por cualquier persona que escanee tu código.
+                </p>
+            </div>
+        </div>
+
+        <!--Card paso 3-->
+        <div class="col-sm-12 col-md-6 col-lg-3 m-3 rounded-4 shadow">
+            <div class="row bg-success rounded-top text-center">
+                <h3 class="text-white my-3">Paso 3</h3>
+            </div>
+            <div class="row m-2">
+                <img src="{% static 'images/check.png' %}" class="img-fluid text-center p-3" alt="">
+                <p>
+                    Llena los datos que prefieras y dale al botón de guardar. ¡Y listo! Ya está funcionando tu
+                    pulsera QR Salud. En caso de que pierdas tu pulsera, puedes eliminar los datos o
+                    eliminar tu cuenta.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Divider-->
+    <div class="bg-primary m-0">
+        <h3 class="text-white p-4">Cuidamos tus datos porque son lo mas importante para ti y tu familia.</h3>
+    </div>
+
+    <!--Preguntas frecuentes-->
+    <div class="p-5 mb-4 bg-light">
+        <div class="row align-items-center justify-content-center mb-3">
+
+            <!--Primera columna-->
+            <div class="col-sm-8 col-md-4 text-center">
+                <img src="{% static 'images/question.png' %}" class="img-fluid" alt="">
+            </div>
+
+            <!--Segunda columna-->
+            <div class="col-sm-12 col-md-8 p-3">
+                <h1 class="fw-bold text-uppercase text-center">Preguntas frecuentes</h1>
+            </div>
+
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+
+            <!--Acordeon de preguntas-->
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué es QR Salud?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            QR Salud es una aplicación web que te permite acceder a datos personales en caso de una
+                            emergencia por medio de una pulsera QR.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Cuál es mi usuario y contraseña?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Al momento de adquirir una pulsera QR Salud, dentro del empaque vendrá una tarjeta con un
+                            usuario y una contraseña, introduce ambos en el apartado de inicar sesión.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Cómo cambio mi contraseña?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Para cambiar tu contraseña debes iniciar sesión, una vez hecho esto debes de ir al apartado
+                            de ajustes, ahí verás la opción de cambiar contraseña.jhryw
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

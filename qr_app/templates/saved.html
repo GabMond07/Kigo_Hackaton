@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block titulo %} Saved {% endblock %}
+{% load static %}
+
+{% block contenido %}
+
+<div class="container-fluid">
+
+    <!--Card-->
+    <div class="rounded shadow m-3">
+
+        <!--row-->
+        <div class="row bg-success m-0 rounded-top">
+            <div class="col">
+                <h2 class="text-white text-center p-3">¡Bien Hecho!</h2>
+            </div>
+        </div>
+
+        <!--row-->
+        <div class="row justify-content-center align-items-center">
+
+            <!--Columna con imagen-->
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center">
+                <img src="{% static 'images/check.png' %}" class="img-fluid p-3 w-75" alt="">
+            </div>
+
+            <!--Columna con texto-->
+            <div class="col-sm-12 col-md-6 col-lg-6 p-3 text-center">
+                <h3>¡Tu información ha sido guardada de forma exitosa!</h3>
+                <p>
+                    Ahora cualquier persona que escanee tu pulsera QR Salud podrá acceder a los datos que decidiste
+                    agregar.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

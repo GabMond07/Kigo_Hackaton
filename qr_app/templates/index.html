@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Home {% endblock %}
+{% block contenido %}
+
+<div class="container-fluid m-0 p-0">
+
+    <!--Portada-->
+    <div class="p-5 portada">
+        <div class="row mb-4 justify-content-center align-items-center">
+            <div class="col">
+                <h1 class="fw-bold text-uppercase text-white">Medidas modernas a tiempos modernos.
+                </h1>
+                <p class="fs-4 text-white">Una forma sencilla de tener todo a la mano.</p>
+
+            </div>
+            <div class="col-sm-8 col-md-4 text-center">
+                <img src="{% static 'images/index.png' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-4 col-sm-12 text-center">
+                <form action="{% url 'info' %}">
+                    <button class="btn btn-light btn-lg" type="summit" href="{% url 'info' %}">¿Cómo funciona?</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Seccion de ejemplo-->
+    <div class="row justify-content-center align-items-center m-0"
+        style="background-attachment:fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-image:url({% static 'images/bg_blue-01.png' %});">
+        <!--Col-->
+        <div class="col-sm-12 col-md-4 col-lg-3 p-4 text-center">
+            <h4 class="bg-dark text-white rounded p-2">Sólo escanea</h4>
+            <img src="{% static 'images/scanning.png' %}" class="img-fluid text-center p-3" alt="">
+        </div>
+
+        <!--Col-->
+        <div class="col-sm-12 col-md-4 col-lg-3 p-4 text-center">
+            <!--Fecha a la derecha-->
+            <div class="d-none d-md-block">
+                <img src="{% static 'images/arrow.png' %}" class="w-50 rotate-right" alt="">
+            </div>
+
+            <!--Fecha hacia abajo-->
+            <div class="d-block d-md-none">
+                <img src="{% static 'images/arrow.png' %}" class="w-25" alt="">
+            </div>
+        </div>
+
+        <!--Col-->
+        <div class="col-sm-12 col-md-4 col-lg-3 p-4 text-center">
+            <h4 class="bg-dark text-white rounded p-2">¡Listo!</h4>
+            <img src="{% static 'images/ss.png' %}" class="img-fluid rounded shadow" alt="">
+
+        </div>
+    </div>
+    <div>
+    </div>
+
+    <!--Section-->
+    <div class="row bg-dark align-items-center m-0">
+        <div class="col-lg-5 col-md-6 col-sm-12 p-5 text-center">
+            <h1 class="text-white fw-bold">La familia es primero...</h1>
+            <p class="fs-4 text-white">
+                Nuestras medidas de seguridad te garantiza tener solo los datos que tu necesites.
+            </p>
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-12 text-center">
+            <img src="{% static 'images/img_family.jpg' %}" class="img-fluid rounded p-3" alt="">
+        </div>
+    </div>
+    <!--Setion de cards-->
+    <div class="row m-0">
+        <div class="col">
+            <h4 class="fw-bold text-uppercase text-center mt-3">Beneficios.</h4>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mx-3 mb-3">
+
+        <!--Card 1-->
+        <div class="col-md-4 col-sm-12 p-3">
+            <div class=" text-center shadow rounded border border-3 w-auto">
+                <img src="{% static 'images/settings.png' %}" class="p-3 w-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Personalizable</h5>
+                    <p class="p-3">
+                        Por seguridad tú mismo puede agregar los datos que prefieras. En caso de que no quieras
+                        agregar un dato, solo deja el espacio vacio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 2-->
+        <div class="col-md-4 col-sm-12 p-3">
+            <div class=" text-center shadow rounded border border-3 w-auto">
+                <img src="{% static 'images/proteger.png' %}" class="p-3 w-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Seguro</h5>
+                    <p class="p-3">
+                        En caso de perder tu pulsera QR, puedes eliminar información sensible o directamente
+                        eliminar tu cuenta para que nadie más pueda escanear tu código.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 3-->
+        <div class="col-md-4 col-sm-12 p-3">
+            <div class=" text-center shadow rounded border border-3 w-auto">
+                <img src="{% static 'images/codigo-qr.png' %}" class="p-3 w-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Versátil</h5>
+                    <p class="p-3">
+                        Sólo basta con escanear tu código QR para ver la información que hayas decidido publicar.
+                        Tan sencillo como eso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{info}}
+{% endblock %}

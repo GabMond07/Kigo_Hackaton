@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %} Login {% endblock %}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+  <div class="row m-3 justify-content-center align-items-center h-100">
+
+    <!--Columna de imagen-->
+    <div class="col d-none d-md-block d-lg-block d-xl-block d-xxl-block rounded text-center">
+      <img src="{% static 'images\login-01.png' %}" class="img-fluid p-3" alt="">
+    </div>
+
+    <!--Columna de login-->
+    <div class="col-md-6 shadow rounded p-4 " style="background-attachment:scroll;background-position: center;background-repeat: no-repeat;background-size: cover;background-image:url({% static 'images/bg-login-01.png' %});">
+      <div class="row align-items-center" id="login">
+        <div class="col">
+          <div class="form-group">
+            <h3 class="text-primary mb-3">Ingresar a mi cuenta</h3>
+            <!--Muestra el error en caso de que el usuario o contraseña sea invalido-->
+            {{error}}
+            <table>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy}}
+                <button class="btn btn-primary my-3 btn-lg">
+                  Ingresar
+                </button>
+              </form>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

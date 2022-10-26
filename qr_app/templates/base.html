@@ -1,0 +1,171 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>{% block titulo %} {% endblock %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--My styles-->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!--Boostrap-->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}">QR SALUD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav nav-fill nav-pills ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info' %}">Información</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'form' user.username %}">Editar datos</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'settings' %}">Ajustes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bg-danger text-white" href="{% url 'logout' %}">Salir</a>
+          </li>
+
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link bg-primary text-white" href="{% url 'signin' %}">Ingresar</a>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% block contenido %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Conoce cómo funciona...</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button class="btn btn-light mb-4">
+                  <a class="text-decoration-none text-dark" href="{% url 'info' %}">Ver información</a>
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Un servicio que busca ayudar a la comunidad.
+          </p>
+        </section>
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 align-self-center">
+              <h2 class="text-uppercase">QR Salud</h2>
+              <!--Grid column-->
+            </div>
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Enlaces</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-white" href="{% url 'index' %}">Inicio</a>
+                </li>
+                <li class="text-white">
+                  <a class="text-white" href="{% url 'info' %}">Información</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                  <a class="text-white" href="{% url 'form' user.username %}">Editar datos</a>
+                </li>
+                <li>
+                  <a class="text-white" href="{% url 'settings' %}">Ajustes</a>
+                </li>
+                <li>
+                  <a class="text-white" href="{% url 'logout' %}">Salir</a>
+                </li>
+
+                {% else %}
+                <li>
+                  <a class="text-white" href="{% url 'signin' %}">Ingresar</a>
+                </li>
+                {% endif %}
+                <li>
+                  <a class="text-white" href="">Politica de privacidad</a>
+                </li>
+                <li>
+                  <a class="text-white" href="">Terminos y condiciones</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://qrsalud.com">QR Salud</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

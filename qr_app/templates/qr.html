@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block titulo %} QR {% endblock %}
+{% block contenido %}
+
+<div class="container">
+    <div class="row justify-content-center mx-3">
+        <div class="col-lg-8 col-md-10 col-sm-12 shadow rounded my-3 p-0">
+
+            <!--Titulo con el codigo escaneado-->
+            <h2 class="text-center bg-primary rounded-top text-white p-2"> Código: {{report.id_code}}</h2>
+
+            <!--Datos del usuario-->
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <th scope="col">Dato</th>
+                        <th scope="col">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td>{{report.name|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td>Edad:</td>
+                        <td>{{report.age|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td>{{report.direccion|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td>NSS:</td>
+                        <td>{{report.nss|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">CURP:</td>
+                        <td>{{report.curp|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Numero emergencia 1:</td>
+                        <td>{{report.number_1|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Numero emergencia 2:</td>
+                        <td>{{report.number_2|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Numero emergencia 3:</td>
+                        <td>{{report.number_3|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Numero emergencia 4:</td>
+                        <td>{{report.number_4|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Correo electronico:</td>
+                        <td>{{report.email|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Correo electronico 2:</td>
+                        <td>{{report.email_2|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3" class="text-center">Información Médica</th>
+                    </tr>
+                    <tr>
+                        <td scope="row">Tipo de sangre:</td>
+                        <td>{{report.blood|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Alergia 1:</td>
+                        <td>{{report.allergies_1|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Alergia 2:</td>
+                        <td>{{report.allergies_2|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Alergia 3:</td>
+                        <td>{{report.allergies_3|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Tiene diabetes:</td>
+                        <td>{{report.diabetes|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Medicamento 1:</td>
+                        <td>{{report.med_1|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Medicamento 2:</td>
+                        <td>{{report.med_2|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Medicamento 3:</td>
+                        <td>{{report.med_3|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Medicamento 4:</td>
+                        <td>{{report.med_4|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Información extra del usuario:</td>
+                        <td>{{report.extra_info|default_if_none:"No hay datos"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

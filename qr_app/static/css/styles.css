@@ -1,0 +1,30 @@
+.portada {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: rgb(59, 51, 177);
+    background: linear-gradient(28deg, rgba(59, 51, 177, 1) 0%, rgba(59, 59, 172, 1) 13%, rgba(0, 212, 255, 1) 100%);
+}
+
+.my-form {
+    background-color: rgb(240, 240, 240);
+}
+
+#div-fam {
+    background-image: url("../static/images/img_family.jpg");
+}
+
+#login {
+    height: 400px;
+}
+
+.rotate-right {
+    transform: rotate(270deg);
+}
+
+.bg-figures {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url("static/images/bg_blue-01.png' %");
+}

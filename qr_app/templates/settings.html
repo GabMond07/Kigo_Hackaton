@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Ajustes {% endblock %}
+{% block contenido %}
+
+<div class="container">
+    <div class="row justify-content-center mx-3">
+        <div class="col-lg-8 col-md-10 col-sm-12 shadow rounded my-3 p-0">
+
+            <!--Titulo-->
+            <h2 class="text-white bg-primary text-center rounded-top p-3">Ajustes</h2>
+
+            <!--Seccion de cambio de contraseña-->
+            <div class="row p-3">
+                <h4>Cambiar contraseña</h4>
+                <form action="">
+                    <div class="form-group">
+                        <label for="user">Contraseña antigua</label>
+                        <input type="password" class="form-control">
+                        <label for="user">Contraseña nueva</label>
+                        <input type="password" class="form-control">
+                        <label for="user">Confirmar Contraseña</label>
+                        <input type="password" class="form-control">
+                        <button class="btn btn-success my-2">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!--Seccion para eliminar cuenta-->
+            <div class="row p-3">
+                <div class="col">
+                    <h4>Eliminar datos permanentemente</h4>
+                    <p>La opcion de borrar los datos es solo en caso de emergencia como: <br>
+                        - Perder el codigo QR <br>
+                        - Mal uso del codigo QR <br>
+                        - Ya no se usa y se desea desechar el QR <br>
+
+                    </p>
+                        <button type="button" class="btn btn-primary my-2"
+                            href="{% url 'delete' user.username %}">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
