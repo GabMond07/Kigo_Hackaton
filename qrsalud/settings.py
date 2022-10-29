@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'qrsalud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '<qrsalud>$qr_app',
+        'NAME': 'qrsalud$qr_app',
         'USER': 'qrsalud',
         'PASSWORD': '$Blancnoir43',
         'HOST':'qrsalud.mysql.pythonanywhere-services.com',
