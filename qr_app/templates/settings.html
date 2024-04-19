@@ -8,7 +8,7 @@
         <div class="col-lg-8 col-md-10 col-sm-12 shadow rounded my-3 p-0">
 
             <!--Titulo-->
-            <h2 class="text-white bg-primary text-center rounded-top p-3">Ajustes</h2>
+            <h2 class="text-white bg-primary text-center rounded-top p-3"></h2>
 
             <!--Seccion de cambio de contraseña-->
             <div class="row p-3">
@@ -21,7 +21,7 @@
                         <input type="password" class="form-control">
                         <label for="user">Confirmar Contraseña</label>
                         <input type="password" class="form-control">
-                        <button class="btn btn-success my-2">Guardar</button>
+                        <button class="btn btn-success my-2">Cambiar contraseña</button>
                     </div>
 
                 </form>
@@ -30,7 +30,7 @@
             <!--Seccion para eliminar cuenta-->
             <div class="row p-3">
                 <div class="col">
-                    <h4>Eliminar datos permanentemente</h4>
+                    <h4>Eliminar cuenta</h4>
                     <p>La opcion de borrar los datos es solo en caso de emergencia como: <br>
                         - Perder el codigo QR <br>
                         - Mal uso del codigo QR <br>
@@ -38,7 +38,7 @@
 
                     </p>
                         <button type="button" class="btn btn-primary my-2"
-                            href="{% url 'delete' user.username %}">Eliminar</button>
+                            href="{% url 'delete' user.username %}">Eliminar cuenta</button>
                 </div>
             </div>
         </div>

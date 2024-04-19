@@ -19,7 +19,7 @@
       <div class="row align-items-center" id="login">
         <div class="col">
           <div class="form-group">
-            <h3 class="text-primary mb-3">Ingresar a mi cuenta</h3>
+            <h3 class="text-primary mb-3">Ingresar a la cuenta</h3>
             <!--Muestra el error en caso de que el usuario o contraseña sea invalido-->
             {{error}}
             <table>
@@ -27,7 +27,7 @@
                 {% csrf_token %}
                 {{ form|crispy}}
                 <button class="btn btn-primary my-3 btn-lg">
-                  Ingresar
+                  Ingresar a la cuenta
                 </button>
               </form>
             </table>

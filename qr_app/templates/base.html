@@ -26,9 +26,6 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'index' %}">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'info' %}">Información</a>
-          </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'form' user.username %}">Editar datos</a>
@@ -36,15 +33,15 @@
           <li class="nav-item">
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'settings' %}">Ajustes</a>
+            <a class="nav-link" href="{% url 'settings' %}">Cambiar contraseña</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bg-danger text-white" href="{% url 'logout' %}">Salir</a>
+            <a class="nav-link bg-danger text-white" href="{% url 'logout' %}">Cerrar sesion</a>
           </li>
 
           {% else %}
           <li class="nav-item">
-            <a class="nav-link bg-primary text-white" href="{% url 'signin' %}">Ingresar</a>
+            <a class="nav-link bg-primary text-white" href="{% url 'signin' %}">Ingresar a la cuenta</a>
           </li>
           {% endif %}
 
@@ -70,18 +67,18 @@
           <form action="">
             <!--Grid row-->
             <div class="row d-flex justify-content-center">
-              <!--Grid column-->
+              <!--Grid column
               <div class="col-auto">
                 <p class="pt-2">
                   <strong>Conoce cómo funciona...</strong>
-                </p>
+                </p>-->
               </div>
               <!--Grid column-->
               <div class="col-auto">
-                <!-- Submit button -->
+                <!-- Submit button 
                 <button class="btn btn-light mb-4">
                   <a class="text-decoration-none text-dark" href="{% url 'info' %}">Ver información</a>
-                </button>
+                </button>-->
               </div>
               <!--Grid column-->
             </div>
@@ -112,34 +109,20 @@
               <h5 class="text-uppercase">Enlaces</h5>
 
               <ul class="list-unstyled mb-0">
-                <li>
-                  <a class="text-white" href="{% url 'index' %}">Inicio</a>
-                </li>
-                <li class="text-white">
-                  <a class="text-white" href="{% url 'info' %}">Información</a>
-                </li>
                 {% if user.is_authenticated %}
                 <li>
                   <a class="text-white" href="{% url 'form' user.username %}">Editar datos</a>
                 </li>
                 <li>
-                  <a class="text-white" href="{% url 'settings' %}">Ajustes</a>
-                </li>
-                <li>
-                  <a class="text-white" href="{% url 'logout' %}">Salir</a>
+                  <a class="text-white" href="{% url 'logout' %}">Cerrar sesion</a>
                 </li>
 
                 {% else %}
                 <li>
-                  <a class="text-white" href="{% url 'signin' %}">Ingresar</a>
+                  <a class="text-white" href="{% url 'signin' %}">Ingresar a la cuenta</a>
                 </li>
                 {% endif %}
                 <li>
-                  <a class="text-white" href="">Politica de privacidad</a>
-                </li>
-                <li>
-                  <a class="text-white" href="">Terminos y condiciones</a>
-                </li>
               </ul>
             </div>
             <!--Grid column-->
